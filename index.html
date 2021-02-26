@@ -39,6 +39,22 @@
       .super-secret {
         color: transparent;
       }
+      @media screen and (max-width: 1000px) {
+        .videos {
+          grid-template-columns: 1fr 1fr;
+        }
+        .video {
+          height: 28vw;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .videos {
+          grid-template-columns: 1fr;
+        }
+        .video {
+          height: 55vw;
+        }
+      }
     </style>
   </head>
   <body>
