@@ -36,8 +36,39 @@
       a {
         color: rgb(0, 0, 109);
       }
+      a:hover {
+        color: green;
+      }
       .super-secret {
         color: transparent;
+      }
+      .checkbox {
+        display: inline-flex;
+        border: 2px solid grey;
+        color: grey;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.5rem;
+      }
+      .checkbox:hover {
+        cursor: pointer;
+        color: green;
+        border-color: green;
+      }
+      .checkbox.checked {
+        background-color: green;
+        color: lightyellow;
+        border-color: green;
+      }
+      #clear-checkboxes {
+        text-decoration: underline;
+      }
+      #clear-checkboxes:hover {
+        color: green;
+        cursor: pointer;
       }
       @media screen and (max-width: 1000px) {
         .videos {
@@ -60,137 +91,139 @@
   <body>
     <h1>💪 Tristen's Secret H.I.I.T. Vault 😺</h1>
     <p>Check out all 33 videos on <a href="https://youtube.com/playlist?list=PLtd_1kuxLZtiA09x_7T5r1BIFoxTcbJia" target="_blank">youtube</a></p>
+    <p>Pro tip: use the checkboxes to keep track of which videos you've done recently</p>
+    <p>Click <a id="clear-checkboxes">here</a> to clear all checkboxes</p>
     <div class="videos">
       <div class="video">
-        <p>07/15/20</p>
+        <p>07/15/20 <a class="checkbox" id='checkbox-071520'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/5zyuvPjaWsI?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>07/20/20</p>
+        <p>07/20/20 <a class="checkbox" id='checkbox-072020'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/aN4WhtzgMpA?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>07/22/20</p>
+        <p>07/22/20 <a class="checkbox" id='checkbox-072220'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/QKFsoHvixPQ?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>07/29/20</p>
+        <p>07/29/20 <a class="checkbox" id='checkbox-072920'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/woxuno4S3VU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>08/03/20</p>
+        <p>08/03/20 <a class="checkbox" id='checkbox-080320'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/HJDT971QrDE?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>08/17/20</p>
+        <p>08/17/20 <a class="checkbox" id='checkbox-081720'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0gNzQ_R1YIw?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>08/19/20</p>
+        <p>08/19/20 <a class="checkbox" id='checkbox-081920'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/bP25xf3EfmY?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>08/24/20</p>
+        <p>08/24/20 <a class="checkbox" id='checkbox-082420'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/d28X7X9o9mk?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>08/26/20</p>
+        <p>08/26/20 <a class="checkbox" id='checkbox-082620'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SDFpYA5jL2Q?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>08/31/20</p>
+        <p>08/31/20 <a class="checkbox" id='checkbox-083120'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6sjFFLysBNU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/02/20</p>
+        <p>09/02/20 <a class="checkbox" id='checkbox-090220'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/bFaCuQ0hHiA?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/09/20</p>
+        <p>09/09/20 <a class="checkbox" id='checkbox-090920'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SCQ43Ohgw5Q?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/14/20</p>
+        <p>09/14/20 <a class="checkbox" id='checkbox-091420'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/U7XS17rLAtg?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/16/20</p>
+        <p>09/16/20 <a class="checkbox" id='checkbox-091620'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/UC77fIK2XA8?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/21/20</p>
+        <p>09/21/20 <a class="checkbox" id='checkbox-092120'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/eirxrG74YGA?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/23/20</p>
+        <p>09/23/20 <a class="checkbox" id='checkbox-092320'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/vGPmDaaL4qU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/28/20</p>
+        <p>09/28/20 <a class="checkbox" id='checkbox-092820'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/iWvjlzj2aZg?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>09/30/20</p>
+        <p>09/30/20 <a class="checkbox" id='checkbox-093020'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/48NDqPcSwDw?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/05/20</p>
+        <p>10/05/20 <a class="checkbox" id='checkbox-100520'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/FaM9F_I-U5k?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/07/20</p>
+        <p>10/07/20 <a class="checkbox" id='checkbox-100720'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/djZ7Tk05buY?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/12/20</p>
+        <p>10/12/20 <a class="checkbox" id='checkbox-101220'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/RAtf-WhR0U4?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/14/20</p>
+        <p>10/14/20 <a class="checkbox" id='checkbox-101420'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nbfRuH43BK8?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/19/20</p>
+        <p>10/19/20 <a class="checkbox" id='checkbox-101920'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/DBOTc3sgF0o?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/21/20</p>
+        <p>10/21/20 <a class="checkbox" id='checkbox-102120'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/dVD3WYgSHyQ?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/26/20</p>
+        <p>10/26/20 <a class="checkbox" id='checkbox-102620'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/_OyJOsYQVI0?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>10/28/20</p>
+        <p>10/28/20 <a class="checkbox" id='checkbox-102820'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qsZL71I19sk?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>11/02/20</p>
+        <p>11/02/20 <a class="checkbox" id='checkbox-110220'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/GGCAHRrU4sk?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>11/04/20</p>
+        <p>11/04/20 <a class="checkbox" id='checkbox-110420'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6mQblE_GNhU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>11/09/20</p>
+        <p>11/09/20 <a class="checkbox" id='checkbox-110920'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/PsJ7coK-Pys?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>01/06/21</p>
+        <p>01/06/21 <a class="checkbox" id='checkbox-010621'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/NzwA8ka2JSg?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>01/11/21</p>
+        <p>01/11/21 <a class="checkbox" id='checkbox-011121'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/JaCeYk2bj8c?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>01/13/21</p>
+        <p>01/13/21 <a class="checkbox" id='checkbox-011321'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/kvgzuhiz8PE?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
-        <p>01/20/21</p>
+        <p>01/20/21 <a class="checkbox" id='checkbox-012021'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/p7tCOD8YuwI?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
@@ -198,5 +231,46 @@
       <br/><br/><br/>
       <a class="super-secret" href="/hiit/cardiosculptclub.html">shhh</a>
     </p>
+    <script>
+      (function() {
+        const checkboxes = document.getElementsByClassName('checkbox');
+        if (window.localStorage.length === 0) {
+          Array.prototype.forEach.call(checkboxes, function(el) {
+            console.log(el.id)
+            window.localStorage.setItem(el.id, false);
+            el.onclick = (e) => {
+              if (e.target.className === 'checkbox') {
+                e.target.className = 'checkbox checked';
+                window.localStorage.setItem(e.target.id, true);
+              } else {
+                e.target.className = 'checkbox';
+                window.localStorage.setItem(e.target.id, false);
+              }
+            }
+          })
+        } else {
+          Array.prototype.forEach.call(checkboxes, function(el) {
+            if (window.localStorage.getItem(el.id) === 'true') {
+              el.className = 'checkbox checked';
+            }
+            el.onclick = (e) => {
+              if (e.target.className === 'checkbox') {
+                e.target.className = 'checkbox checked';
+                window.localStorage.setItem(e.target.id, true);
+              } else {
+                e.target.className = 'checkbox';
+                window.localStorage.setItem(e.target.id, false);
+              }
+            }
+          })
+        }
+        document.getElementById('clear-checkboxes').onclick = (e) => {
+          window.localStorage.clear();
+          Array.prototype.forEach.call(checkboxes, function(el) {
+            el.className = 'checkbox';
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
