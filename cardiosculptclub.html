@@ -36,6 +36,37 @@
       a {
         color: rgb(0, 0, 109);
       }
+      a:hover {
+        color: green;
+      }
+      .checkbox {
+        display: inline-flex;
+        border: 2px solid grey;
+        color: grey;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.5rem;
+      }
+      .checkbox:hover {
+        cursor: pointer;
+        color: green;
+        border-color: green;
+      }
+      .checkbox.checked {
+        background-color: green;
+        color: lightyellow;
+        border-color: green;
+      }
+      #clear-checkboxes {
+        text-decoration: underline;
+      }
+      #clear-checkboxes:hover {
+        color: green;
+        cursor: pointer;
+      }
       @media screen and (max-width: 1000px) {
         .videos {
           grid-template-columns: 1fr 1fr;
@@ -56,9 +87,11 @@
   </head>
   <body>
     <h1>💪 Tristen's Super Secret Cardio Sculpt Vault 😺</h1>
+    <p>Pro tip: use the checkboxes to keep track of which videos you've done recently</p>
+    <p>Click <a id="clear-checkboxes">here</a> to clear all checkboxes</p>
     <div class="videos">
       <div class="video">
-        <p>02/25/21</p>
+        <p>02/25/21 <a class="checkbox" id='checkbox-022521'>✔</a></p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/rvew81GGZKI?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video">
@@ -78,5 +111,46 @@
 
       </div>
     </div>
+    <script>
+      (function() {
+        const checkboxes = document.getElementsByClassName('checkbox');
+        if (window.localStorage.length === 0) {
+          Array.prototype.forEach.call(checkboxes, function(el) {
+            console.log(el.id)
+            window.localStorage.setItem(el.id, false);
+            el.onclick = (e) => {
+              if (e.target.className === 'checkbox') {
+                e.target.className = 'checkbox checked';
+                window.localStorage.setItem(e.target.id, true);
+              } else {
+                e.target.className = 'checkbox';
+                window.localStorage.setItem(e.target.id, false);
+              }
+            }
+          })
+        } else {
+          Array.prototype.forEach.call(checkboxes, function(el) {
+            if (window.localStorage.getItem(el.id) === 'true') {
+              el.className = 'checkbox checked';
+            }
+            el.onclick = (e) => {
+              if (e.target.className === 'checkbox') {
+                e.target.className = 'checkbox checked';
+                window.localStorage.setItem(e.target.id, true);
+              } else {
+                e.target.className = 'checkbox';
+                window.localStorage.setItem(e.target.id, false);
+              }
+            }
+          })
+        }
+        document.getElementById('clear-checkboxes').onclick = (e) => {
+          window.localStorage.clear();
+          Array.prototype.forEach.call(checkboxes, function(el) {
+            el.className = 'checkbox';
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
