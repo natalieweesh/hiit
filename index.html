@@ -36,14 +36,11 @@
       a {
         color: rgb(0, 0, 109);
       }
+      .link {
+        text-decoration: underline;
+      }
       a:hover {
         color: green;
-      }
-      .super-secret {
-        color: transparent;
-      }
-      .super-secret:hover {
-        color: transparent;
       }
       .checkbox {
         display: inline-flex;
@@ -94,9 +91,10 @@
   </head>
   <body>
     <h1>💪 Tristen's Secret H.I.I.T. Vault 😺</h1>
-    <p>Check out all 33 videos on <a href="https://youtube.com/playlist?list=PLtd_1kuxLZtiA09x_7T5r1BIFoxTcbJia" target="_blank">youtube</a></p>
+    <p>Check out all 33 videos on <a class="link" href="https://youtube.com/playlist?list=PLtd_1kuxLZtiA09x_7T5r1BIFoxTcbJia" target="_blank">youtube</a></p>
     <p>Pro tip: use the checkboxes to keep track of which videos you've done recently</p>
-    <p>Click <a id="clear-checkboxes">here</a> to clear all checkboxes</p>
+    <p>Click <a class="link" id="clear-checkboxes">here</a> to clear all checkboxes</p>
+    <p>Also try Tristen's <a class="link" href="https://natalieweesh.github.io/hiit/cardiosculptclub.html">Cardio Sculpt classes</a> here!</p>
     <div class="videos">
       <div class="video">
         <p>07/15/20 <a class="checkbox" id='checkbox-071520'>✔</a></p>
@@ -233,7 +231,6 @@
     </div>
     <p>
       <br/><br/><br/>
-      <a class="super-secret" href="/hiit/cardiosculptclub.html">shhh</a>
     </p>
     <script>
       (function() {
